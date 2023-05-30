@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+
+  font-size: 62.5%;
+
+  --bc-header: #8e9aaf;
+  --bc-headerTag: #cbc0d3;
+  --fc-header: #ffffff;
+  --ff-title: "Staatliches", cursive;
+  --ff-textMobile-mobile: "Palanquin", sans-serif;
+  --fc-textMobile: #23053a;
+  --fc-textMobileImg: #feeafa;
+}
+
+header {
+  width: 100%;
+  min-height: 27.9rem;
+  height: 100%;
+  background-color: var(--bc-header);
+}
+
+#logo1 {
+  display: none;
+}
+
+#logo2 {
+  display: flex;
+  margin: auto;
+  padding-top: 3.2rem;
+  padding-bottom: 4px;
+}
+
+.tagText {
+
+  margin: auto;
+  width: 100%;
+  height: 4.9rem; 
+  padding: 1rem 0;
+  background-color: var(--bc-headerTag);
+}
+
+header h1 {
+  font-family: var(--ff-title);
+  font-weight: 400;
+  font-size: 4rem;
+  line-height: 3.4rem;
+  letter-spacing: 0.05em;
+  color: var(--fc-header);
+  text-align: center;
+}
+
+.textMobile {
+  font-family: var(--ff-textMobile-mobile);
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 1.5rem;
+  text-align: center;
+
+  color: var(--fc-textMobile);
+  width: 30.5rem;
+  height: 7.5rem;
+  margin: 1.4rem 4rem 6.3rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3.2rem;
+}
+
+.image1 img, .image2 img, .image3 img, .image4 img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 3.2rem;
+  border-radius: 2rem;
+}
+
+.image1, .image2, .image3, .image4 {
+  position: relative;
+}
+
+.image1 h2, .image2 h2, .image3 h2, .image4 h2 {
+  font-family: var(--ff-title);
+  color: var(--fc-textMobile);
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 3.4rem;
+  letter-spacing: 0.05em;
+
+  width: 11rem;
+  height: 3.5rem;
+  background: var(--fc-textMobileImg);
+  border-radius: 2rem;
+  text-align: center;
+}
+
+.image1 h2, .image3 h2 {
+  position: absolute;
+  left: 20rem;
+  bottom: 24rem;
+}
+
+.image2 h2, .image4 h2 {
+  position: absolute;
+  left: 20rem;
+  bottom: 44rem;
+}
+
+.image1 h2, .image2 h2, .image3 h2, .image4 h2 {
+  animation-name: topdown;
+  animation-duration: 1800ms;
+  animation-fill-mode: forwards;
+}
+
+main img {
+  animation-name: bottomdown;
+  animation-duration: 800ms;
+  animation-fill-mode: forwards;
+  object-fit: cover;
+  display: grid;
+}
+
+@keyframes topdown {
+
+  0% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bottomdown {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(-15px);
+  }
+}
